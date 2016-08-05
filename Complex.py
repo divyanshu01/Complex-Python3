@@ -13,6 +13,14 @@ class Complex:
 		
 		return add_result
 	
+	def mulComplex(self, complex):
+		mul_result = Complex()
+		
+		mul_result.real = self.real * complex.real - self.img * complex.img
+		mul.result.img = self.real * complex.img + self.img * complex.real
+		
+		return mul_result
+	
 	def subComplex(self, complex):
 		sub_result = Complex()
 		
@@ -21,10 +29,3 @@ class Complex:
 		
 		return sub_result
 	
-	def mulComplex(self, complex):
-		mul_result = Complex()
-		
-		mul_result.real = self.real * complex.real - self.img * complex.img
-		mul.result.img = self.real * complex.img + self.img * complex.real
-		
-		return mul_result
