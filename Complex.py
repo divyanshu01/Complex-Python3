@@ -32,5 +32,8 @@ class Complex:
 	def modulusComplex(self):
 		return self.real ** 2 + self.img ** 2
 	
+	def conjugateComplex(self):
+		self.img = -self.img
+	
 	
 	
