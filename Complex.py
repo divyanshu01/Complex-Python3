@@ -35,5 +35,12 @@ class Complex:
 	def conjugateComplex(self):
 		self.img = -self.img
 	
+	def divideComplex(self, complex):
+		complex.conjugate
+		div_result = self.mulComplex(complex)
+		div_result.real /= complex.modulusComplex()
+		div_result.img /= complex.modulusComplex()
+		
+		return div_result
 	
 	
