@@ -43,4 +43,9 @@ class Complex:
 		
 		return div_result
 	
+	def inveseComplex(self):
+		self.conjugateComplex()
+		self.real /= self.modulusComplex()
+		self.img /= self.modulusComplex()
+	
 	
