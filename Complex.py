@@ -47,7 +47,36 @@ class Complex:
 		
 		return sub_result
 	
-	
+	def inputComplex(self):
+		temp_list = input().split(' ')
+		if len(temp_list) != 1:
+			for i in range(len(temp_list)):
+				if temp_list[i] != '+' or temp_list[i] != '-':
+					if 'i' not in temp_list[i]:
+						
+		else:
+			string = temp_list[0]
+			sign = 'plus'
+			for i in range(len(string)):
+				if string[i] == '+':
+					break
+				else if string[i] == '-':
+					sign = 'minus'
+					break
+			if 'i' not in string[:i]:
+				self.real = int(string[:i])
+				
+				if sign == 'plus':
+					self.img = int(string[i + 1:])
+				else:
+					self.img = -int(string[i + 1:])
+			else:
+				if sign == 'plus':
+					self.real = int(string[i + 1:])
+				else:
+					self.real = -int(string[i + 1:])
+				
+				self.img = int(string[:i])
 	
 	
 	
