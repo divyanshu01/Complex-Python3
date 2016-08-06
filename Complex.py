@@ -4,7 +4,6 @@ class Complex:
 		real = 0
 		img = 0
 	
-	
 	def addComplex(self, complex):
 		add_result = Complex()
 		
@@ -12,6 +11,9 @@ class Complex:
 		add_result.img = self.img + complex.img
 		
 		return add_result
+	
+	def conjugateComplex(self):
+		self.img = -self.img
 	
 	def mulComplex(self, complex):
 		mul_result = Complex()
@@ -21,20 +23,6 @@ class Complex:
 		
 		return mul_result
 	
-	def subComplex(self, complex):
-		sub_result = Complex()
-		
-		sub_result.real = self.real - complex.real
-		sub_result.img = self.img - complex.img
-		
-		return sub_result
-	
-	def modulusComplex(self):
-		return self.real ** 2 + self.img ** 2
-	
-	def conjugateComplex(self):
-		self.img = -self.img
-	
 	def divideComplex(self, complex):
 		complex.conjugate
 		div_result = self.mulComplex(complex)
@@ -43,9 +31,24 @@ class Complex:
 		
 		return div_result
 	
+	def modulusComplex(self):
+		return self.real ** 2 + self.img ** 2
+	
 	def inveseComplex(self):
 		self.conjugateComplex()
 		self.real /= self.modulusComplex()
 		self.img /= self.modulusComplex()
 	
+	def subComplex(self, complex):
+		sub_result = Complex()
+		
+		sub_result.real = self.real - complex.real
+		sub_result.img = self.img - complex.img
+		
+		return sub_result
 	
+	
+	
+	
+	
+		
