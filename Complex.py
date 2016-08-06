@@ -29,3 +29,8 @@ class Complex:
 		
 		return sub_result
 	
+	def modulusComplex(self):
+		return self.real ** 2 + self.img ** 2
+	
+	
+	
