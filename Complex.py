@@ -19,13 +19,13 @@ class Complex:
 		complex.conjugateComplex()
 		
 		div_result = self.mulComplex(complex)
-		div_result.real /= complex.modulusComplex()
-		div_result.img /= complex.modulusComplex()
+		div_result.real /= round(complex.modulusComplex() * 1.0, 2)
+		div_result.img /= round(complex.modulusComplex() * 1.0, 2)
 		
 		return div_result
 	
 	def modulusComplex(self):
-		return (self.real ** 2 + self.img ** 2) ** (1/2.0)
+		return round(((self.real ** 2 + self.img ** 2) ** (1/2.0)), 2)
 	
 	def inveseComplex(self):
 		self.conjugateComplex()
