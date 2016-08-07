@@ -24,7 +24,7 @@ class Complex:
 		return div_result
 	
 	def modulusComplex(self):
-		return self.real ** 2 + self.img ** 2
+		return (self.real ** 2 + self.img ** 2) ** (1/2.0)
 	
 	def inveseComplex(self):
 		self.conjugateComplex()
