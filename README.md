@@ -12,10 +12,10 @@ This project is an extension to functionality of python 3 so that complex number
 >This function conjugates the complex number which is represented by the calling `Complex` object.
 
 * `divideComplex(Complex)`
->This function returns a new `Complex` object representing the divided result of the calling `Complex` object and the one passed as an argument.
+>This function returns a new `Complex` object representing the divided result of the calling `Complex` object and the one passed as an argument. The values are rounded off.
 
 * `modulusComplex()`
->The function returns the modulus value of the complex number represented by the calling `Complex` object.
+>The function returns the modulus value of the complex number represented by the calling `Complex` object. It returns is rounded to upto 2 digits.
 
 * `inverseComplex()`
 >This function returns the rationalized result of the inverse of the complex number which is represented by the calling `Complex` object. No new object is returned, the calling object is modified.
