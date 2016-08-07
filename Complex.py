@@ -1,8 +1,8 @@
 class Complex:
 	
 	__init__(self, a = 0, b = 0):
-		self.real = 0
-		self.img = 0
+		self.real = a
+		self.img = b
 	
 	def addComplex(self, complex):
 		add_result = Complex()
