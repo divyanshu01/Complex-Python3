@@ -1,7 +1,7 @@
 from Complex import Complex
 
-c1 = Complex(3,4)
-c2 = Complex(-4,5)
+#c1 = Complex(3,4)
+#c2 = Complex(-4,5)
 
 #c3 = c1.addComplex(c2)
 #c3.printComplex()
@@ -18,3 +18,4 @@ c2 = Complex(-4,5)
 #c5.printComplex()
 
 #c6 = c1.subComplex(c2)
+#c6.printComplex()
