@@ -1,15 +1,46 @@
 class Complex:
 	
 	def __init__(self, a = 0, b = 0):
-		
-		""" Parameterized constructor of the class Complex. """
+	"""
+		Parameterized constructor of the class Complex
+	"""
 		
 		self.real = a
 		self.img = b
 	
-	def addComplex(self, complex):
+	def read_complex(self, number=''):
+	"""
+		Function to read complex number in any patter given.
+		Still work under progress.
+	"""
+		if number == '':
+			raise Exception('No number is provided')
 		
-		""" Function to add two complex numbers represented by Complex class objects. """
+		number = number.replace(' ', '')
+		
+		# Handling unnecessary plus signs
+		# Handling needs to be better
+		if number[0] == '+':
+			number = number[1:]
+		split_list = number.split('+')
+		if len(split_list) <= 2:
+			if len(split_list) == 2:
+				if 'i' in split_list[0]:
+					self.img = int(split_list[0].replace('i', ''))
+				else:
+					self.real = int(split_list[0])
+			else if len(split_list) == 1:
+
+
+
+		else:
+			raise Exception('Invalid expression input')
+
+	
+	def addComplex(self, complex):
+	"""
+		Function to add two complex numbers represented by Complex class objects
+	"""
 		
 		add_result = Complex()
 		
@@ -19,15 +50,17 @@ class Complex:
 		return add_result
 	
 	def conjugateComplex(self):
-		
-		""" Conjugates the complex number that is represented by the calling Complex class object. """
+	"""
+		Conjugates the complex number that is represented by the calling Complex class object
+	"""
 		
 		self.img = -self.img
 	
-	def divideComplex(self, complex):
-		
-		""" Function to divide two complex numbers and return the rounded result represented by a new object
-		of the same class."""
+	def divideComplex(self, complex):	
+	"""
+		Function to divide two complex numbers and return the rounded result represented by a new object
+		of the same class
+	"""
 		
 		complex.conjugateComplex()
 		
@@ -38,22 +71,25 @@ class Complex:
 		return div_result
 	
 	def modulusComplex(self):
-		
-		""" Returns the modulus value of the complex number. """
+	"""
+		Returns the modulus value of the complex number
+	"""
 		
 		return round(((self.real ** 2 + self.img ** 2) ** (1/2.0)), 3)
 	
 	def inveseComplex(self):
-		
-		"""  Returns the rationalized result of the recirpocal of the given complex number. """
+	"""
+		Returns the rationalized result of the recirpocal of the given complex number
+	"""
 		
 		self.conjugateComplex()
 		self.real /= self.modulusComplex()
 		self.img /= self.modulusComplex()
 	
-	def mulComplex(self, complex):
-		
-		''' FUnction to multiply two complex numbers. '''
+	def mulComplex(self, complex):	
+	"""
+		Function to multiply two complex numbers
+	"""
 		
 		mul_result = Complex()
 		
@@ -63,8 +99,9 @@ class Complex:
 		return mul_result
 		
 	def printComplex(self):
-		
-		''' Function to print the complex numbers on the screen. '''
+	"""
+		Function to print the complex numbers on the screen
+	"""
 		
 		if self.real == 0:
 			if self.img == 0:
@@ -83,8 +120,9 @@ class Complex:
 				print('i')
 	
 	def subComplex(self, complex):
-		
-		''' Function to return the result of the subtraction of two complex numbers. '''
+	"""
+		Function to return the result of the subtraction of two complex numbers
+	"""
 		
 		sub_result = Complex()
 		
